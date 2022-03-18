@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="jquery-3.1.1.js" type="text/javascript"></script>
+    <script src="jquery.color.min.js"></script>
+    <script src="jquery.confetti.js" defer></script>
+    <script src="app.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+    <title>Document</title>
+
+    <style>
+        body{
+            text-align: center;
+            font-family: "Tangerine";
+        }
+        #timeUp{
+            font-size: 50px;
+            color: crimson;
+            display: none;
+            position: absolute;
+            margin-left: 600px;
+            margin-top: 150px;
+        }
+        #newHighScore{
+            font-size: 50px;
+            color: crimson;
+            display: none;
+            position: absolute;
+            margin-left: 550px;
+            margin-top: 150px;
+        }
+        #f5{
+            font-size: 50px;
+            color: crimson;
+            display: none;
+            position: absolute;
+            margin-left: 550px;
+            margin-top: 300px;
+        }
+        #tap{
+            font-size: 50px;
+            color: rgb(195, 209, 66);
+            display: none;
+            position: absolute;
+            margin-left: 550px;
+            margin-top: 150px;
+        }
+        /* CSS for Initial Screen Background */
+        #initialScreen{
+            background: rgb(113, 131, 146);
+            width: 100%;
+            height: 100vh;
+        }
+        /* CSS for countdown */
+        #counter{
+            height: 100vh;
+            line-height: 100vh;
+            color: rgb(0, 0, 0);
+            text-align: center;
+            margin: auto; 
+            font-size: 100px;           
+        }
+        /* CSS for game screen */
+        #header, #gameBox{
+            display: none;
+        }
+        .objects{
+            display: inline-block;
+            width: 150px;
+            height: 100px;
+            margin: auto;
+            font-size: 30px;
+        }
+        table{
+            height: 400px;
+            width: 400px;     
+            text-align: center;
+            margin: auto;    
+        }
+        td{
+            height: 100px;
+            width: 100px;
+            border: 1px solid black;
+            margin: auto;
+        }
+        /* Health Bar */
+        #footer{
+            width: 300px;
+            height: 10px;
+            background: rgb(62, 62, 122);
+            border: 2px solid black;          
+            margin: auto;
+            margin-top: 20px;
+            display: none;
+        }
+        #health{
+            width: 1050px;
+            height: 9px;
+            background: rgb(221, 123, 31);
+        }
+        
+        
+    </style>
+</head>
+
+
+<body>
+    <!-- Initial Screen -->
+    <div id="initialScreen">
+        <div id="counter"></div>
+    </div>
+    
+    <!-- Second screen for game -->
+    <header id="header">
+        <div class="objects">
+            <h3>High Score</h3>
+            <p id="highScore"></p>
+        </div>
+        <div class="objects">
+            <h3>Score</h3>
+            <p id="score"></p>
+        </div>
+        <div class="objects">
+            <h3>Time</h3>
+            <p id="time"></p>
+        </div>
+    </header>
+
+    <div id="gameBox">
+        <p id="timeUp">Time is up!</p>
+        <p id="newHighScore">New High Score</p>
+        <p id="tap">Tap the black tiles!</p>
+        <p id="f5">Press F5 to play again</p>
+        <table>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- Health Bar -->
+    <footer id="footer">
+        <div id="health"></div>
+    </footer>
+
+</body>
+</html>
